@@ -1,0 +1,85 @@
+:root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(20, 19, 19, 0.87);
+
+  /* 🎨 Difuminado de colores */
+  background: linear-gradient(
+    135deg,
+    #ffe4c4,
+    #ffd1dc,
+    #d4f1f4,
+    #e6e6fa
+  );
+  background-size: 400% 400%;
+  animation: gradiente 12s ease infinite;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animación del difuminado */
+@keyframes gradiente {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  /* Difuminado extra tipo glass */
+  backdrop-filter: blur(6px);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+
+    background: linear-gradient(
+      135deg,
+      #59cbe7,
+      #bbacc4,
+      #2edfdf
+    );
+    background-size: 300% 300%;
+    animation: gradiente 10s ease infinite;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
